@@ -97,6 +97,7 @@ export default new Map<SpriteVariant, SpriteVariantDetail | null>([
   ['Units-TransportTrain', null],
   ['Units-Truck', null],
   ['Units-VampireMedic', null],
+  ['Units-WheeledTank', null],
   ['Units-XFighter', null],
   ['Units-Zombie', null],
 ] as const);

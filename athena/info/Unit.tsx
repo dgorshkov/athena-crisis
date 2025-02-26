@@ -198,6 +198,50 @@ class UnitAbilities {
         return this.rescue;
       case Ability.Sabotage:
         return this.sabotage;
+
+export const WheeledTank = new UnitInfo({
+  abilities: new Set(),
+  ai: {
+    capturable: true,
+    power: 0.8,
+    value: 600,
+  },
+  attack: {
+    primaryWeapon: createWeapon({
+      id: 401,
+      animation: {
+        recoil: true,
+        recoilDelay: 4,
+      },
+      damage: {
+        [SmallTank.id]: 65,
+        [Infantry.id]: 75,
+        [Building.id]: 45,
+      },
+      range: [1, 1],
+      supply: 9,
+      type: WeaponType.Direct,
+    }),
+  },
+  configuration: {
+    fuel: 70,
+    movement: 7,
+    vision: 3,
+  },
+  cost: 7000,
+  gender: Gender.Neutral,
+  health: 8,
+  id: 401,
+  movementType: MovementType.Wheeled,
+  name: 'Wheeled Tank',
+  sprite: {
+    name: 'Units-WheeledTank',
+    position: new SpriteVector(0, 0),
+    unfold: null,
+    direction: -1,
+  },
+});
+
       case Ability.Supply:
         return this.supply;
       case Ability.Unfold:
